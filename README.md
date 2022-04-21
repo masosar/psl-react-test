@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# PSL ReactJS Code Challenge 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This code challenge was originally supposed to be posted as a fork of [this project in Stackblitz](https://stackblitz.com/edit/psl-react-test?file=index.tsx), but for different reasons I was unable to make it work just right. So I decided to deliver the app through here.  
+So, this is the original requirement:
+```
+## Welcome to PSL ReactJS Challenge
+The API https://randomuser.me/api/ returns a random and single user, everytime you call it.
 
-## Available Scripts
+## The challenge
+* CAll https://randomuser.me/api/ and create a list of users with their full name, their picture and their e-mail.
+* The design must match https://firstwordpharma.com/ feel free to copy the css for buttons and list from there.
+* Reuse the code as much as you can.
+* Feel free to use Axios or any other library Services, and Components, and the ReactHooks, and Typescript are welcome
+* Documentation and Testing is at your discretion.
+  ...
+```
+The app uses axios to retrieve data from the Random User API.
+## Running the app
 
-In the project directory, you can run:
+```
+npm start
+```
+## Running tests
+Some basic tests will run with the command:
+```
+npm run test
+```
+Example of test:
+```
+describe("Users", () => {
+  it("should render component <Users>", async () => {
+    render(<Users />);
+    expect(screen.getByText(/stories/i)).toBeInTheDocument();
+  });
+});
+```
+The tests helped to detect multiple errors and finally they passed OK
+```
+ PASS  src/__tests__/Footer.test.js
+ PASS  src/__tests__/Users.test.js
+ PASS  src/__tests__/Header.test.js
 
-### `npm start`
+Test Suites: 3 passed, 3 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        5.714 s
+Ran all test suites related to changed files.
+```
+# What I´d improve
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ - Having more time, the styling could be still improved and we could have paginated the results of the api.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Conclusion
 
-### `npm test`
+My deepest thanks to the PSL team for this opportunity. It has been so  much fun to do so far and it really was a very valuable exercise.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
